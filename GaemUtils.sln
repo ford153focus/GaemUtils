@@ -1,0 +1,25 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30406.217
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GaemUtils.HalyavaHunter", "GaemUtils.HalyavaHunter\GaemUtils.HalyavaHunter.csproj", "{730C24CD-1DF1-41D3-9C95-15277F4D93FF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{730C24CD-1DF1-41D3-9C95-15277F4D93FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{730C24CD-1DF1-41D3-9C95-15277F4D93FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{730C24CD-1DF1-41D3-9C95-15277F4D93FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{730C24CD-1DF1-41D3-9C95-15277F4D93FF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {63CB1288-56D1-42B0-AEAD-4B43AEAB7664}
+	EndGlobalSection
+EndGlobal
