@@ -7,9 +7,10 @@ namespace GaemUtils.HalyavaHunter
     {
         private static async Task Main()
         {
-            await GoodOldGames.Hunt();
-            await EpicGamesStore.Hunt();
-            Console.WriteLine("Hello World!");
+            // try { await GoodOldGames.Hunt(); } catch (Exception e) { Console.WriteLine(e); }
+            try { await EpicGamesStore.Hunt(); } catch (Exception e) { Console.WriteLine(e); }
+            await (await Utils.GetBrowserAsync()).CloseAsync();
+            Console.WriteLine("Bye!");
         }
     }
 }

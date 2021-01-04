@@ -15,7 +15,7 @@ namespace GaemUtils.HalyavaHunter
         private static Page _page;
         public static readonly WaitForSelectorOptions WaitForSelectorOptions = new() { Timeout = 5310 };
 
-        private static async Task<Browser> GetBrowserAsync()
+        public static async Task<Browser> GetBrowserAsync()
         {
             if (_browser == null)
             {
@@ -44,8 +44,9 @@ namespace GaemUtils.HalyavaHunter
 
                 _browser = await Puppeteer.LaunchAsync(new LaunchOptions
                 {
-                    IgnoreHTTPSErrors = true,
+                    DefaultViewport = null,
                     Headless = false,
+                    IgnoreHTTPSErrors = true,
 
                     ExecutablePath = exePath,
                     UserDataDir = profilePath,
@@ -53,8 +54,7 @@ namespace GaemUtils.HalyavaHunter
                     Args = new[]
                     {
                         "--start-maximized"
-                    },
-                    DefaultViewport = null
+                    }
                 });
             }
 
@@ -87,6 +87,12 @@ namespace GaemUtils.HalyavaHunter
                 _credentials = JsonValue.Parse(credentialsCfgStr);
             }
             return _credentials;
+        }
+        
+        public static async Task WaitAndClick(Page page, string selector)
+        {
+            await page.WaitForSelectorAsync(selector, WaitForSelectorOptions);
+            await page.ClickAsync(selector);
         }
     }
 }
